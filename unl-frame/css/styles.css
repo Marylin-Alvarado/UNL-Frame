@@ -1,3 +1,75 @@
+/* Estilos específicos para Curator.io */
+/* Estilos básicos para el feed de Curator.io */
+#curator-feed-default-feed-layout {
+  background: transparent;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Permitir que Curator.io use sus propios estilos de grid */
+.crt-feed {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Estilos mínimos para asegurar visibilidad */
+.crt-feed * {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Estilos básicos para los posts - menos agresivos */
+.crt-post {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+}
+
+.crt-post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Mejorar el texto de los posts */
+.crt-post-text {
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Estilo para las imágenes */
+.crt-post-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Personalizar el logo de Curator.io */
+.crt-logo {
+  font-size: 12px !important;
+  color: #666 !important;
+  text-decoration: none !important;
+  margin-top: 20px !important;
+  display: inline-block !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .crt-feed {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+    
+  .crt-post .crt-post-image, 
+  .crt-post img {
+    height: 250px !important;
+  }
+}
 /* ==========================================================================
    VARIABLES CSS Y CONFIGURACIÓN GLOBAL
    ========================================================================== */
